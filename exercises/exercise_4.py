@@ -2,8 +2,19 @@
 
 def are_brackets_balanced(s):
     # Your code here
-    pass
-
+    if len(s)%2==0:
+        for i in range(int(len(s)/2)):
+            if s[i] == "(":
+                if s[len(s)-i-1]!=")":
+                    return False
+            elif s[i] == "[":
+                if s[len(s)-i-1]!="]":
+                    return False
+            elif s[i] == "{":
+                if s[len(s)-i-1]!="}":
+                    return False
+        return True
+    return False
 # Unit tests
 import unittest
 
