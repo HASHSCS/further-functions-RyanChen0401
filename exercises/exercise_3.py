@@ -2,7 +2,17 @@
 
 def gcd(a, b):
     # Your code here
-    pass
+    divisor=0
+    if a<b:
+        for i in range(1,a+1,1):
+            if a%i==0 and b%i==0:
+                divisor=i
+    if b<a:
+        for i in range(1,b+1,1):
+            if a%i==0 and b%i==0:
+                divisor=i
+    return divisor
+    
 
 # Unit tests
 import unittest
